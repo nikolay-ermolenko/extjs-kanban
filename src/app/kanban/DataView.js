@@ -28,7 +28,7 @@ Ext.define('App.kanban.DataView', {
             '<span>{text}</span>')
             .apply({text: 'Заданий в этом статусе нет'}),
         bind: {
-            selection: '{aa}',
+            selection: '{selectedTask}',
             store: '{localTaskStore}'
         }
     }

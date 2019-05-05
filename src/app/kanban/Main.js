@@ -11,7 +11,6 @@ Ext.define('App.kanban.Main', {
     controller: 'main-kanban',
 
     title: 'Доска',
-    flex: 1.5,
     border: true,
     scrollable: 'horizontal',
     bodyPadding: 10,

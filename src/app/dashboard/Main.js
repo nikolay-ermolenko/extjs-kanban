@@ -24,12 +24,54 @@ Ext.define('App.dashboard.Main', {
 
     items: [
         {
-            xtype: 'main-kanban',
-            region: 'center'
+            xtype: 'container',
+            region: 'center',
+            layout: {
+                type: 'vbox',
+                align: 'stretch'
+            },
+            items: [
+                {
+                    xtype: 'main-kanban',
+                    flex: 1.7
+                },
+                {
+                    xtype: 'form',
+                    layout: 'column',
+                    defaults: {
+                        xtype: 'displayfield',
+                        columnWidth: 0.5
+                    },
+                    items: [
+                        {
+                            bind: '{selectedTask.number}'
+                        },
+                        {
+                            bind: '{selectedTask.name}'
+                        },
+                        {
+                            bind: '{selectedTask.state.name}'
+                        },
+                        {
+                            bind: {
+                                hidden: '{!selectedTask.priority.color}',
+                                value: '{selectedTask.priority.name}',
+                                fieldStyle: '{selectedTask.priority.color:this.getPriorityColor}'
+                            }
+                        },
+                        {
+                            bind: '{selectedTask.date:this.dateFormat("d.m.Y")}'
+                        },
+                        {
+                            bind: '{selectedTask.user.lastName}, {selectedTask.user.firstName}'
+                        }
+                    ]
+                }
+            ]
         },
         {
             title: 'Исходные данные',
-            flex: 1,
+            flex: .4,
             collapsible: true,
             region: 'south',
             layout: {

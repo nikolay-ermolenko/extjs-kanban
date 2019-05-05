@@ -16,7 +16,7 @@ Ext.define('App.kanban.MainController', {
             'onupdatekanbanstate': 'updateKanbanState'
         },
         'data-view-kanban dataview': {
-            viewready: function(view) {
+            viewready: function (view) {
                 view.dragZone = new Ext.dd.DragZone(view.getEl(), {
                     getDragData: function (e) {
                         var sourceEl = e.getTarget(view.itemSelector, 10);
@@ -51,7 +51,13 @@ Ext.define('App.kanban.MainController', {
                         }
 
                         if (sourceStateId !== null && currentStateId !== sourceStateId) {
+                            var stateData = Ext.StoreManager
+                                .get('statusStore')
+                                .getById(sourceStateId);
                             data.draggedRecord.set('state.id', sourceStateId);
+                            data.draggedRecord.set(
+                                'state',
+                                Ext.copyTo({}, stateData.getData(), 'id,sort,name'));
                             data.draggedRecord.commit();
                         }
                     }

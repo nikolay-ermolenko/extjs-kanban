@@ -9,7 +9,7 @@ Ext.define('App.dashboard.MainViewModel', {
     ],
 
     data: {
-        aa: null,
+        selectedTask: null,
         statusData: []
     },
     stores: {

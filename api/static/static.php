@@ -84,7 +84,7 @@ ob_end_flush();
 
 $task = array();
 $task_uniq_map = array();
-$task_count_limit = 14;
+$task_count_limit = 24;
 $task_start_id = 7000;
 $task_action = array(
     'Создание',

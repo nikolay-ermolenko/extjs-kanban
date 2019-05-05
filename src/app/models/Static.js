@@ -14,6 +14,11 @@ Ext.define('App.models.Static', {
             mapping : 'state.id'
         },
         {
+            name: 'state.name',
+            type: 'number',
+            mapping : 'state.name'
+        },
+        {
             name: 'priority.id',
             type: 'number',
             mapping : 'priority.id'
