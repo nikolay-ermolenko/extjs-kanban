@@ -1,0 +1,26 @@
+.task-item {
+    user-select: none;
+    padding: 6px;
+    margin: 6px;
+    border: 1px solid #CCC;
+}
+
+.task-item.x-selected-task-item {
+    background-color: #ffefbb;
+}
+
+.my-row-highlight-class {
+    border: 5px solid lime;
+}
+
+.data-view-kanban > span {
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    color: #BBB;
+    font-size: 1.1em;
+    padding: 10px;
+}

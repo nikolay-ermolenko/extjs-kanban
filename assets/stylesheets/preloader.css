@@ -1,0 +1,63 @@
+html {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: table-cell;
+    margin: 0;
+    vertical-align: middle;
+    background-color: #cde8d1;
+    background-image: url("../images/wallpapers/wallpaper-000.jpg") !important;
+    background-position: center center !important;
+    background-size: 100% 100% !important;
+}
+
+div#preloadercontainer {
+    text-align: center;
+
+}
+
+div#preloader {
+    -moz-user-select: none;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 16px;
+    line-height: normal;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    z-index: 20000;
+}
+
+div#preloader-info {
+    border: 1px solid #dddddd;
+    background-color: #eeeeee;
+    background-image: radial-gradient(circle 700px at 20px 40px, rgb(249, 249, 249) 0%, rgb(200, 200, 200) 50%, rgb(140, 140, 140) 100%);
+    border-radius: 0px;
+    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.4);
+    padding: 10px;
+}
+
+div#preloader-log {
+    color:#666666;
+    font-size: 0.7em !important;
+    letter-spacing: 1px;
+    line-height: 20px;
+    margin-top: 15px;
+}
+
+div#preloader-title {
+    color: #888888;
+    font-size: 1.6em !important;
+    line-height: 36px;
+    margin: 20px 0 0;
+    padding: 0 0;
+    text-shadow: 1px 1px #ffffff;
+}
+
+div#preloader-version {
+    color: #666666;
+    font-size: 1em !important;
+    margin-top: 7px;
+}
